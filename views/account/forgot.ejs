@@ -36,6 +36,15 @@
          	</div>         
          <% } %>
       
+         <% if(flash.info) { %>
+         	<div class="alert alert-info fade in">
+          	  <button type="button" data-dismiss="alert" class="close"><span class="ion-close-circled"></span></button>
+          	  <% flash.info.forEach(function(infoMsg){ %>
+            	  <div><%= infoMsg.msg %></div>
+              <% }); %>
+         	</div>         
+         <% } %>
+      
          <div class="col-sm-8 col-sm-offset-2">
             <form method="POST">
                <legend>Forgot Password</legend>

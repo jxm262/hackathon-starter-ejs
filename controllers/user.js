@@ -28,10 +28,7 @@ exports.postLogin = function(req, res, next) {
   req.assert('password', 'Password cannot be blank').notEmpty();
 
   var errors = req.validationErrors();
-  
-  console.log('errors: ');
-  console.log(errors);
-  
+
   if (errors) {
     req.flash('errors', errors);
     return res.redirect('/login');
@@ -330,7 +327,7 @@ exports.postForgot = function(req, res, next) {
           req.flash('errors', { msg: 'No account with that email address exists.' });
           return res.redirect('/forgot');
         }
-
+        
         user.resetPasswordToken = token;
         user.resetPasswordExpires = Date.now() + 3600000; // 1 hour
 
