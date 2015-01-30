@@ -19,8 +19,27 @@
                   <li><a href="/contact">Contact</a></li>
                </ul>
                <ul class="nav navbar-nav navbar-right">
+               
+               	<% if(!user){ %>
                   <li><a href="/login">Login</a></li>
                   <li><a href="/signup">Create Account</a></li>
+               	<% } else { %>
+               		<li class="dropdown">
+                    	<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                    		<% if(user.profile.picture) { %>
+                    			<img src="https://avatars.githubusercontent.com/u/3460750?v=3">Justin Maat&nbsp;<i class="caret"></i></img>
+                    		<% } else { %>
+                    			<img src="<%= user.gravatar(60) %>"> <%= user.profile.name || user.email || user.id %> &nbsp; <i class="caret"></i></img>
+                    		<% } %>
+                    	</a>
+                    	<ul class="dropdown-menu">
+                    		<li><a href="/account"><span class="ion-person"></span>My Account</a></li>
+                    		<li class="divider"></li>
+                    		<li><a href="/logout"><span class="ion-log-out"></span> Logout</a></li>
+                    	</ul>
+                  	</li>
+                <% } %>
+                 
                </ul>
             </div>
          </div>

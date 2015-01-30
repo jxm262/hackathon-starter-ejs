@@ -29,6 +29,9 @@ exports.postLogin = function(req, res, next) {
 
   var errors = req.validationErrors();
   
+  console.log('errors: ');
+  console.log(errors);
+  
   if (errors) {
     req.flash('errors', errors);
     return res.redirect('/login');
@@ -64,9 +67,6 @@ exports.logout = function(req, res) {
  */
 exports.getSignup = function(req, res) {
   if (req.user) return res.redirect('/');
-  
-  console.log('flash');
-  console.log(req.session.flash);
   
   res.render('account/signup', {
     title: 'Create Account',
@@ -298,7 +298,8 @@ exports.getForgot = function(req, res) {
     return res.redirect('/');
   }
   res.render('account/forgot', {
-    title: 'Forgot Password'
+    title: 'Forgot Password',
+    flash: req.session.flash
   });
 };
 
