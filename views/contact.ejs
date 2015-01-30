@@ -4,7 +4,7 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="csrf-token" content="d08whsNHPHRT0RDoTg+MGPciO9UHHnnKT87qI=">
+      <meta name="csrf-token" content="<%= _csrf %>">
       <title>Contact - Hackathon Starter</title>
       <link rel="stylesheet" href="/assets/main-f7562345bf9e833562d6e6b13706a2a7.css" />
    </head>
@@ -59,7 +59,7 @@
             <h3>Contact Form</h3>
          </div>
          <form role="form" method="POST" class="form-horizontal">
-            <input type="hidden" name="_csrf" value="d08whsNHPHRT0RDoTg+MGPciO9UHHnnKT87qI=">
+            <input type="hidden" name="_csrf" value="<%= _csrf %>">
             <div class="form-group">
                <label for="name" class="col-sm-2 control-label">Name</label>
                <div class="col-sm-8"><input type="text" name="name" id="name" autofocus class="form-control"></div>

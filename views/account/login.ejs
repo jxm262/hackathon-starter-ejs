@@ -4,7 +4,7 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="csrf-token" content="BpMWtX8bJMozMf+bl8bKN8y+5iiS5LkF5jh94=">
+      <meta name="csrf-token" content="<%= _csrf %>">
       <title><%= title %> - Hackathon Starter</title>
       <link rel="stylesheet" href="/assets/main-f7562345bf9e833562d6e6b13706a2a7.css" />
    </head>
@@ -40,7 +40,7 @@
             <h3>Sign in</h3>
          </div>
          <form method="POST">
-            <input type="hidden" name="_csrf" value="BpMWtX8bJMozMf+bl8bKN8y+5iiS5LkF5jh94=">
+            <input type="hidden" name="_csrf" value="<%= _csrf %>">
             <div class="col-sm-8 col-sm-offset-2">
                <div class="form-group"><label for="email" class="control-label">Email</label><input type="email" name="email" id="email" placeholder="Email" autofocus class="form-control"></div>
                <div class="form-group"><label for="password" class="control-label">Password</label><input type="password" name="password" id="password" placeholder="Password" class="form-control"></div>
