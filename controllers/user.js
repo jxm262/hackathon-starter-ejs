@@ -64,8 +64,13 @@ exports.logout = function(req, res) {
  */
 exports.getSignup = function(req, res) {
   if (req.user) return res.redirect('/');
+  
+  console.log('flash');
+  console.log(req.session.flash);
+  
   res.render('account/signup', {
-    title: 'Create Account'
+    title: 'Create Account',
+    flash: req.session.flash
   });
 };
 
@@ -79,7 +84,8 @@ exports.postSignup = function(req, res, next) {
   req.assert('confirmPassword', 'Passwords do not match').equals(req.body.password);
 
   var errors = req.validationErrors();
-
+  
+  
   if (errors) {
     req.flash('errors', errors);
     return res.redirect('/signup');

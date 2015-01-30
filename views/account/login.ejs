@@ -30,7 +30,9 @@
          <% if(flash.errors) { %>
          	<div class="alert alert-danger fade in">
           	  <button type="button" data-dismiss="alert" class="close"><span class="ion-close-circled"></span></button>
-          	  <div><%= flash.errors[0].msg %></div>
+          	  <% flash.errors.forEach(function(error){ %>
+            	  <div><%= error.msg %></div>
+              <% }); %>
          	</div>         
          <% } %>
          
