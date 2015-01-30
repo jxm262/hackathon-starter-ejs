@@ -22,3 +22,6 @@ Thumbs.db
 
 #for eclipse
 .project
+
+#don't store the actual secret keys
+secrets.js
