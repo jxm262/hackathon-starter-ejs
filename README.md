@@ -1,3 +1,13 @@
+Modified [hackathon-starter](https://github.com/jxm262/hackathon-starter-ejs)
+=============================================================================
+I took this entire repository from here [https://github.com/jxm262/hackathon-starter-ejs](https://github.com/jxm262/hackathon-starter-ejs).  But plan to modify this heavily.  I've currently ported the original jade to ejs, but still researching which tech stack to use for the templating system.  I'll also probably modify or add quite a bit, so I wanted to make this as a separate project.  
+  
+    
+ Please note, the original credit belongs to the original hackathon starter project.  I'm just using this for personal use and whoever else may prefer ejs.  
+ 
+
+Original documentation below -  
+
 ![Alt](https://lh4.googleusercontent.com/-PVw-ZUM9vV8/UuWeH51os0I/AAAAAAAAD6M/0Ikg7viJftQ/w1286-h566-no/hackathon-starter-logo.jpg)
 Hackathon Starter
 =======================
