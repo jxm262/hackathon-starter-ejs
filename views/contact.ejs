@@ -54,6 +54,14 @@
               <% }); %>
          	</div>         
          <% } %>
+         <% if(flash.success) { %>
+         	<div class="alert alert-success fade in">
+          	  <button type="button" data-dismiss="alert" class="close"><span class="ion-close-circled"></span></button>
+          	  <% flash.success.forEach(function(_success){ %>
+            	  <div><%= _success.msg %></div>
+              <% }); %>
+         	</div>         
+         <% } %>
         
          <div class="page-header">
             <h3>Contact Form</h3>
