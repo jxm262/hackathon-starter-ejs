@@ -45,6 +45,34 @@
          </div>
       </div>
       <div class="container">
+      
+         <% if(flash.errors) { %>
+         	<div class="alert alert-danger fade in">
+          	  <button type="button" data-dismiss="alert" class="close"><span class="ion-close-circled"></span></button>
+          	  <% flash.errors.forEach(function(error){ %>
+            	  <div><%= error.msg %></div>
+              <% }); %>
+         	</div>         
+         <% } %>
+         
+         <% if(flash.success) { %>
+         	<div class="alert alert-success fade in">
+          	  <button type="button" data-dismiss="alert" class="close"><span class="ion-close-circled"></span></button>
+          	  <% flash.success.forEach(function(_success){ %>
+            	  <div><%= _success.msg %></div>
+              <% }); %>
+         	</div>         
+         <% } %>   
+         
+         <% if(flash.info) { %>
+         	<div class="alert alert-info fade in">
+          	  <button type="button" data-dismiss="alert" class="close"><span class="ion-close-circled"></span></button>
+          	  <% flash.info.forEach(function(_info){ %>
+            	  <div><%= _info.msg %></div>
+              <% }); %>
+         	</div>         
+         <% } %>   
+               
          <h1>Hackathon Starter</h1>
          <p class="lead">A boilerplate for Node.js web applications.</p>
          <hr>
